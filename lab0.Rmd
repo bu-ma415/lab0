@@ -77,7 +77,10 @@ ggplot(mpg %>% mutate(cyl = factor(cyl)), aes(displ, hwy)) +
   geom_smooth()
 ```
 
-We can attempt to find such a relationship using a linear model. We assume that if $H$ is `hwy` and $D$ is `displ` then, at least approximately on average, we have $H \propto D^{\beta}$. After taking the log of both sides, this yields the following *linear model*:
+We can attempt to find such a relationship using a linear model. We assume that if $H$ is `hwy` and $D$ is `displ` then, at least approximately on average, we have 
+
+$$H \propto D^{\beta}$$ 
+After taking the log of both sides, this yields the following *linear model*:
 
 $$\log(H) = \alpha + \beta \cdot \log(D)$$
 Fitting the model yields
@@ -88,7 +91,7 @@ coef(fit)
 ```
 and thus, $\beta \approx -0.5$, which yields
 
-$$H \approx C / \sqrt{D}.$$
+$$H \propto 1 / \sqrt{D}.$$
 
 A visual check seems to confirm that `hwy` has an approximately linear relationship with the inverse square root of `displ`:
 
