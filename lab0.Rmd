@@ -1,13 +1,8 @@
 ---
 title: 'MA 415/615 -- Lab 0: Workflow example'
-author:
-date: "Week of 01-28-2019"
-output:
-  pdf_document:
-    latex_engine: xelatex
-  html_document:
-    df_print: paged
-  html_notebook: default
+author: Spring 2023
+date: "Week of 01-23-2023"
+output: html_document
 subtitle: Based on Lecture 2
 ---
 
