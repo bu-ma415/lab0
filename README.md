@@ -1,3 +1,3 @@
 # lab0
 
-Data analysis workflow example using R notebooks.
+Data analysis workflow example
