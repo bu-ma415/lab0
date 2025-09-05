@@ -57,7 +57,7 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
 We notice that `cyl` has only a few values so it's best seen as a *factor* (categorical variable):
 
 ```{r displhwy3}
-ggplot(data = mpg %>% mutate(cyl = factor(cyl)),
+ggplot(data = mpg |> mutate(cyl = factor(cyl)),
        aes(x = displ, y = hwy)) + geom_point(aes(color = cyl))
 ```
 
@@ -67,7 +67,7 @@ ggplot(data = mpg %>% mutate(cyl = factor(cyl)),
 There seems to be a functional relationship between `displ` and `hwy`:
 
 ```{r displhwy4, message=FALSE}
-ggplot(mpg %>% mutate(cyl = factor(cyl)), aes(displ, hwy)) +
+ggplot(mpg |> mutate(cyl = factor(cyl)), aes(displ, hwy)) +
   geom_point(aes(color = cyl)) +
   geom_smooth()
 ```
@@ -91,7 +91,7 @@ $$H \propto 1 / \sqrt{D}.$$
 A visual check seems to confirm that `hwy` has an approximately linear relationship with the inverse square root of `displ`:
 
 ```{r displhwy5, message=FALSE}
-ggplot(mpg %>% mutate(cyl = factor(cyl)),
+ggplot(mpg |> mutate(cyl = factor(cyl)),
        aes(1 / sqrt(displ), hwy)) +
   geom_point(aes(color = cyl)) +
   geom_smooth()
