@@ -1,8 +1,8 @@
 ---
 title: 'MA 415/615 -- Lab 0: Workflow example'
-author: Spring 2023
-date: "Week of 01-23-2023"
-output: html_document
+author: Fall 2025
+date: "Week of 2025-09-08"
+output: github_document
 subtitle: Based on Lecture 2
 ---
 
